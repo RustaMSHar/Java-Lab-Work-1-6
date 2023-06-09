@@ -30,27 +30,27 @@
 операции (добавления, поиска по коду в базе, всех заказов и удаление заказа). Протестировать репозитории 4 типов (массив, база с нативным SQL, Spring data, сохранение в MongoDB).
 --------------------
 Шетсая лаба по Java
-<brСоздать REST  API для сервиса управления заказами.
-<brХранить заказ, например,
-<brpublic class Order {
-<br@Id
-<br@GeneratedValue(strategy = GenerationType.AUTO)
-<br<brprivate Long id;
-<brprivate String orderNumber;  //Номер заказа 
+<br>Создать REST  API для сервиса управления заказами.
+<br>Хранить заказ, например,
+<br>public class Order {
+<br>@Id
+<br>@GeneratedValue(strategy = GenerationType.AUTO)
+<br>private Long id;
+<br>private String orderNumber;  //Номер заказа 
 
-<br@OneToMany(cascade = CascadeType.ALL)
-<brprivate List<OrderLineItems> orderLineItemsList;
-<br}
-<brи 
-<brПозиции данного заказа
-<brpublic class OrderLineItems {
+<br>@OneToMany(cascade = CascadeType.ALL)
+<br>private List<OrderLineItems> orderLineItemsList;
+<br>}
+<br>и 
+<br>Позиции данного заказа
+<br>public class OrderLineItems {
   
-<br@Id
-<br@GeneratedValue(strategy = GenerationType.IDENTITY)
+<br>@Id
+<br>@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-<brprivate Long id;
-<brprivate String producеName; //Наименование 
-<brprivate BigDecimal price;  //Цена количество
-<brprivate Integer quantity; //Количество
-<br}
-<brДанные хранить в базе данных PostgreSQL
+<br>private Long id;
+<br>private String producеName; //Наименование 
+<br>private BigDecimal price;  //Цена количество
+<br>private Integer quantity; //Количество
+<br>}
+<br>Данные хранить в базе данных PostgreSQL
